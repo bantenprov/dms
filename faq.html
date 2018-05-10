@@ -1,0 +1,28 @@
+---
+faq:
+  - question: Apakah DMS itu?
+    answer: DMS adalah singkatan dari *Document Managemen System*, DMS disini dipergunakan untuk mendokumentasikan aplikasi yang dibangun atau dikembangkan oleh Provinsi Banten.
+  - question: Apa saja di sajikan dalam DMS ini?
+    answer: Materi materi yang disajikan dalam DMS ini adalah berdasarkan tahapan siklus hidup sistem yang sering disebut dengan SDLC (Systems Development Life Cycle, Siklus Hidup Pengembangan Sistem).
+  - question: Apa saja tahapan SDLC yang digunakan ?
+    answer: Diselaraskan dengan pengadministrasian maka tahapan - tahapan SDLC yang digunakan adalah Desain dan perancangan, Pengembangan, Integrasi dan Pengujian, Implementasi.
+  - question: Tools apa yang digunakan untuk menulis dokumentasi?
+    answer: Markdown adalah sebuah tools untuk konversi text-to-HTML yang bisa digunakan ketika membuat konten pada web. Dengan Markdown memungkinkan kita untuk membuat sebuah format html dengan sangat sederhana dan ramah lingkungan (*easy-to-read dan easy-to write*).
+  - question: Dimana dokumentasi ini disimpan?
+    answer: File dokumentasi disimpan di GitHub yang merupakan sebuah layanan penyimpanan web bersama untuk proyek pengembangan perangkat lunak yang menggunakan sistem pengontrol versi Git dan layanan hosting internet. Hal ini banyak digunakan untuk kode komputer. Ini memberikan kontrol akses dan beberapa fitur kolaborasi seperti pelacakan bug, permintaan fitur, manajemen tugas, dan wiki untuk setiap proyek.
+---
+
+<h1>FAQ</h1>
+
+<section class="faq">
+	<ul>
+		{% for item in page.faq %}
+			<li><a href="#{{ item.question | slugify }}">{{ item.question }}</a></li>
+		{% endfor %}
+	</ul>
+
+	{% for item in page.faq %}
+		<h2 id="{{ item.question | slugify}}">{{ item.question }}<a class="header-link" href="#{{ item.question | slugify }}">#</a></h2>
+		{{ item.answer | markdownify }}
+	{% endfor %}
+</section>

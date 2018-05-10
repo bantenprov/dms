@@ -1,0 +1,6 @@
+- name: Documents
+  link: /
+- name: Videos
+  link: /videos/
+- name: FAQ
+  link: /faq/
