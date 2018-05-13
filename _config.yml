@@ -3,7 +3,7 @@
 
 title: DMS
 url: "https://dms.bantenprov.go.id/"
-baseurl:
+baseurl: "https://dms.bantenprov.go.id/"
 google_analytics_key:
 disqus_shortname:
 newsletter_action:
